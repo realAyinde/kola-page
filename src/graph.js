@@ -1,11 +1,6 @@
 window.onload = function () {
   var optionsV = document.getElementsByClassName("options-v")[0];
 
-  if (optionsV) {
-    optionsV.querySelector('[to="left"]').addEventListener("click", previous);
-    optionsV.querySelector('[to="right"]').addEventListener("click", next);
-  }
-
   function next() {
     var ul = optionsV.getElementsByTagName("ul")[0];
     var active = ul.getElementsByClassName("active")[0];
@@ -22,6 +17,11 @@ window.onload = function () {
       active.className = "option-item";
       active.previousElementSibling.className += " active";
     }
+  }
+
+  if (optionsV !== null) {
+    optionsV.querySelector('[to="left"]').addEventListener("click", previous);
+    optionsV.querySelector('[to="right"]').addEventListener("click", next);
   }
 
   var filterList = document.getElementsByClassName("filter-list")[0];
