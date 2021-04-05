@@ -1,4 +1,5 @@
 // window.onload = function () {
+    window.onload = function () {
   var optionsV = document.getElementsByClassName("options-v")[0];
 
   function next() {
@@ -19,9 +20,14 @@
     }
   }
 
-//   if (optionsV !== null) {
-    optionsV.querySelector('[to="left"]').addEventListener("click", previous, false);
+  optionsV.querySelector('[to="left"]').addEventListener("click", previous, true);
     optionsV.querySelector('[to="right"]').addEventListener("click", next, false);
+}
+
+  
+
+//   if (optionsV !== null) {
+    
 //   }
 
   var filterList = document.getElementsByClassName("filter-list")[0];
