@@ -1,4 +1,4 @@
-$border : rgba(0, 0, 0, 0.125);
+$border: rgba(0, 0, 0, 0.125);
 
 .graph {
   border: 1px solid $border;
@@ -10,20 +10,19 @@ $border : rgba(0, 0, 0, 0.125);
   align-items: center;
   border-radius: 4px;
 
-  &>*:last-child {
+  & > *:last-child {
     border-left: 1px solid $border;
     margin-left: 4px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
     div {
       border-bottom: 1px solid $border;
       margin-bottom: 8px;
     }
   }
 }
-
 
 .options-v {
   font-family: Arial, Helvetica, sans-serif;
@@ -43,14 +42,12 @@ $border : rgba(0, 0, 0, 0.125);
 
     .option-item {
       display: none;
-     
 
       &.active {
         display: inline-block;
         width: fit-content;
         font-weight: bold;
       }
-
     }
   }
 
@@ -59,9 +56,8 @@ $border : rgba(0, 0, 0, 0.125);
   }
 }
 
-
 .options-h {
-  font-family:  Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 0.9em;
   padding: 4px;
   display: flex;
@@ -80,7 +76,6 @@ $border : rgba(0, 0, 0, 0.125);
 
     .option-item {
       display: none;
-     
 
       &.active {
         display: inline-block;
@@ -90,3 +85,41 @@ $border : rgba(0, 0, 0, 0.125);
     }
   }
 }
+
+.filter-list {
+  list-style-type: none;
+  padding-left: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 12px;
+  padding: 6px 12px;
+
+  .filter-item {
+    position: relative;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: black;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    padding: 2px 20px;
+    overflow: hidden;
+    border: 1px solid $border;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 12px;
+
+    &.selected {
+      color: white;
+      background-color: black;
+    }
+  }
+}
+
+// .details {
+//   border: 1px solid $border;
+//   padding: 8px;
+//   margin: 8px;
+//   border-radius: 4px;
+// }

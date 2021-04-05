@@ -1,20 +1,35 @@
-// Add squares
-
-// const squares = document.querySelector('.squares');
-// for (var i = 1; i < 365; i++) {
-//   const level = Math.floor(Math.random() * 3);
-//   squares.insertAdjacentHTML('beforeend', `<li data-level="${level}"></li>`);
-// }
-
 var optionsV = document.getElementsByClassName("options-v")[0];
 
-// var active = optionsV.getElementsByClassName("active")[0];
-optionsV.querySelector('[to="left"]').addEventListener('click', next(), false)
+optionsV.querySelector('[to="left"]').addEventListener("click", previous);
+optionsV.querySelector('[to="right"]').addEventListener("click", next);
 
-
-function next(params) {
-    console.log('yeah Done!'); 
+function next() {
+  var ul = optionsV.getElementsByTagName("ul")[0];
+  var active = ul.getElementsByClassName("active")[0];
+  if (active.nextElementSibling) {
+    active.className = "option-item";
+    active.nextElementSibling.className += " active";
+  }
 }
 
-// previous.setAttribute("class", "option-item fade");
-// next.setAttribute("class", "option-item fade");
+function previous() {
+  var ul = optionsV.getElementsByTagName("ul")[0];
+  var active = ul.getElementsByClassName("active")[0];
+  if (active.previousElementSibling) {
+    active.className = "option-item";
+    active.previousElementSibling.className += " active";
+  }
+}
+
+var filterList = document.getElementsByClassName("filter-list")[0];
+var filterItems = filterList.getElementsByClassName("filter-item");
+
+for (var i = 0; i < filterItems.length; i++) {
+  filterItems[i].addEventListener("click", function () {
+    var current = filterList.getElementsByClassName("selected");
+    if (current.length > 0) {
+      current[0].className = current[0].className.replace(" selected", "");
+    }
+    this.className += " selected";
+  });
+}
