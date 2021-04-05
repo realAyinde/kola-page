@@ -1,4 +1,6 @@
-var optionsV = document.getElementsByClassName("options-v")[0];
+(function() {
+    
+ var optionsV = document.getElementsByClassName("options-v")[0];
 
 optionsV.querySelector('[to="left"]').addEventListener("click", previous);
 optionsV.querySelector('[to="right"]').addEventListener("click", next);
@@ -32,4 +34,4 @@ for (var i = 0; i < filterItems.length; i++) {
     }
     this.className += " selected";
   });
-}
+}})("docReady", window);
