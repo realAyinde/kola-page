@@ -1,4 +1,4 @@
-window.onload = function () {
+// window.onload = function () {
   var optionsV = document.getElementsByClassName("options-v")[0];
 
   function next() {
@@ -19,10 +19,10 @@ window.onload = function () {
     }
   }
 
-  if (optionsV !== null) {
+//   if (optionsV !== null) {
     optionsV.querySelector('[to="left"]').addEventListener("click", previous);
     optionsV.querySelector('[to="right"]').addEventListener("click", next);
-  }
+//   }
 
   var filterList = document.getElementsByClassName("filter-list")[0];
   var filterItems = filterList.getElementsByClassName("filter-item");
@@ -36,4 +36,4 @@ window.onload = function () {
       this.className += " selected";
     });
   }
-}
+// }
