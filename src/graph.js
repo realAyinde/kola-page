@@ -20,8 +20,8 @@
   }
 
 //   if (optionsV !== null) {
-    optionsV.querySelector('[to="left"]').addEventListener("click", previous);
-    optionsV.querySelector('[to="right"]').addEventListener("click", next);
+    optionsV.querySelector('[to="left"]').addEventListener("click", previous, false);
+    optionsV.querySelector('[to="right"]').addEventListener("click", next, false);
 //   }
 
   var filterList = document.getElementsByClassName("filter-list")[0];
