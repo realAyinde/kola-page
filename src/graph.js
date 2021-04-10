@@ -1,5 +1,6 @@
 // window.onload = function () {
-  var optionsV = document.getElementsByClassName("options-v")[0];
+//   var optionsV = document.getElementsByClassName("options-v")[0];
+  var optionsV = document.getElementbyId("month-options");
 
   function next() {
     var ul = optionsV.getElementsByTagName("ul")[0];
