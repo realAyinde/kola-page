@@ -1,6 +1,6 @@
 // window.onload = function () {
 //   var optionsV = document.getElementsByClassName("options-v")[0];
-import "jquery";
+import $ from "jquery";
 
 var optionsV = document.getElementById("month-options");
 
