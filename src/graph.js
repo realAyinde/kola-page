@@ -23,8 +23,9 @@ var optionsV = document.getElementById("month-options");
       active.previousElementSibling.className += " active";
     }
   }
-$('[to="left"]').click(previous())
-$('[to="right"]').click(next())
+  
+$("[to='left']").click(previous)
+$("[to='right']").click(next)
 //   optionsV.querySelector('[to="left"]').onclick = () => {
 //       previous()
 //     };
