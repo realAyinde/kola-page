@@ -19,13 +19,14 @@
       active.previousElementSibling.className += " active";
     }
   }
-
-  optionsV.querySelector('[to="left"]').onclick = () => {
-      previous()
-    };
-    optionsV.querySelector('[to="right"]').onclick = () => {
-        next()
-      };;
+$('[to="left"]').click(previous())
+$('[to="right"]').click(next())
+//   optionsV.querySelector('[to="left"]').onclick = () => {
+//       previous()
+//     };
+    // optionsV.querySelector('[to="right"]').onclick = () => {
+    //     next()
+    //   };;
 
   var filterList = document.getElementsByClassName("filter-list")[0];
   var filterItems = filterList.getElementsByClassName("filter-item");
