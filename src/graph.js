@@ -1,6 +1,8 @@
 // window.onload = function () {
 //   var optionsV = document.getElementsByClassName("options-v")[0];
 import $ from "jquery";
+import jquery from "jquery";
+export default (window.$ = window.jQuery = jquery);
 
 var optionsV = document.getElementById("month-options");
 
