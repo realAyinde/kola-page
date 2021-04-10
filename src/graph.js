@@ -23,7 +23,7 @@ var optionsV = document.getElementById("month-options");
       active.previousElementSibling.className += " active";
     }
   }
-  
+
 $("[to='left']").click(previous)
 $("[to='right']").click(next)
 //   optionsV.querySelector('[to="left"]').onclick = () => {
@@ -37,12 +37,12 @@ $("[to='right']").click(next)
   var filterItems = filterList.getElementsByClassName("filter-item");
 
   for (var i = 0; i < filterItems.length; i++) {
-    filterItems[i].onclick = () => {
+    filterItems[i].addEventListener("click", ()=> {
       var current = filterList.getElementsByClassName("selected");
       if (current.length > 0) {
         current[0].className = current[0].className.replace(" selected", "");
       }
       this.className += " selected";
-    };
+    });
   }
 // }
